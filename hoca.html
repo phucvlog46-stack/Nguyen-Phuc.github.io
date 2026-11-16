@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Hồ Cá Vui Nhộn - Bài 6.1.1</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+            /* Nền đại dương chuyển sắc kết hợp ảnh nền nếu có trong file zip */
+            background: linear-gradient(to bottom, #00b4db 0%, #0083b0 40%, #004e92 100%);
+            position: relative;
+        }
+
+        /* Nút quay về trang chủ */
+        .back-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 999;
+            background: rgba(255, 255, 255, 0.9);
+            color: #0f172a;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-family: 'Segoe UI', sans-serif;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: background 0.2s;
+        }
+        .back-btn:hover { background: #ffffff; }
+
+        /* Các sinh vật trong hồ */
+        .creature {
+            position: absolute;
+            user-select: none;
+        }
+
+        /* Cá mập bơi ngang qua lại */
+        #shark {
+            width: 240px;
+            top: 18%;
+            animation: swimLeftRight 16s linear infinite;
+        }
+
+        /* Rùa biển bơi chậm ở tầng dưới */
+        #turtle {
+            width: 140px;
+            bottom: 12%;
+            animation: swimRightLeft 26s linear infinite;
+        }
+
+        /* Thợ lặn lơ lửng lên xuống */
+        #diver {
+            width: 150px;
+            left: 20%;
+            animation: floatUpDown 7s ease-in-out infinite alternate;
+        }
+
+        /* Đàn cá vàng bơi lượn */
+        #goldfish {
+            width: 180px;
+            top: 48%;
+            animation: swimLeftRight 20s ease-in-out infinite;
+        }
+
+        /* Đàn cá nhỏ bơi nền xa */
+        #faintschool {
+            width: 130px;
+            top: 32%;
+            opacity: 0.75;
+            animation: swimRightLeft 30s linear infinite;
+        }
+
+        /* Hiệu ứng bơi từ trái sang phải và lật đầu quay lại */
+        @keyframes swimLeftRight {
+            0%   { left: -260px; transform: scaleX(1); }
+            49%  { left: calc(100vw + 20px); transform: scaleX(1); }
+            50%  { left: calc(100vw + 20px); transform: scaleX(-1); }
+            99%  { left: -260px; transform: scaleX(-1); }
+            100% { left: -260px; transform: scaleX(1); }
+        }
+
+        /* Hiệu ứng bơi từ phải sang trái và lật đầu quay lại */
+        @keyframes swimRightLeft {
+            0%   { right: -200px; transform: scaleX(-1); }
+            49%  { right: calc(100vw + 20px); transform: scaleX(-1); }
+            50%  { right: calc(100vw + 20px); transform: scaleX(1); }
+            99%  { right: -200px; transform: scaleX(1); }
+            100% { right: -200px; transform: scaleX(-1); }
+        }
+
+        /* Hiệu ứng thợ lặn lên xuống */
+        @keyframes floatUpDown {
+            0%   { top: 15%; transform: rotate(4deg); }
+            100% { top: 62%; transform: rotate(-6deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="back-btn">← Về Trang Chủ</a>
+
+    <!-- Các thẻ img trỏ tới hình ảnh giải nén từ aquarium.zip -->
+    <img id="shark" class="creature" src="images/shark.png" alt="Cá mập">
+    <img id="turtle" class="creature" src="images/turtle.png" alt="Rùa biển">
+    <img id="diver" class="creature" src="images/diver1.png" alt="Thợ lặn">
+    <img id="goldfish" class="creature" src="images/goldFishSchool.png" alt="Đàn cá vàng">
+    <img id="faintschool" class="creature" src="images/faintSchool.png" alt="Đàn cá nhỏ">
+
+</body>
+</html>
