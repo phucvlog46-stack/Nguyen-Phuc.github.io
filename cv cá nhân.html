@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>CV Cá Nhân - Bài 6.1.3</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #e2e8f0;
+            margin: 0;
+            padding: 30px 15px;
+            color: #1e293b;
+        }
+        .top-bar {
+            max-width: 920px;
+            margin: 0 auto 15px auto;
+        }
+        .top-bar a {
+            display: inline-block;
+            text-decoration: none;
+            background: #1e3a8a;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .cv-container {
+            max-width: 920px;
+            margin: 0 auto;
+            background: #ffffff;
+            display: flex;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+        }
+        /* Cột bên trái */
+        .sidebar {
+            width: 34%;
+            background: #1e3a8a;
+            color: #f8fafc;
+            padding: 35px 25px;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto 25px auto;
+            border: 4px solid #93c5fd;
+            background-color: #cbd5e1;
+        }
+        .sidebar h3 {
+            font-size: 17px;
+            text-transform: uppercase;
+            border-bottom: 1px solid #60a5fa;
+            padding-bottom: 6px;
+            margin: 25px 0 12px 0;
+            letter-spacing: 0.5px;
+        }
+        .sidebar p, .sidebar li {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #e2e8f0;
+        }
+        .sidebar ul { padding-left: 18px; }
+
+        /* Cột bên phải */
+        .main-content {
+            width: 66%;
+            padding: 40px;
+        }
+        .name-title h1 {
+            margin: 0;
+            font-size: 32px;
+            color: #1e3a8a;
+            text-transform: uppercase;
+        }
+        .name-title .role {
+            font-size: 16px;
+            color: #2563eb;
+            font-weight: bold;
+            margin: 6px 0 28px 0;
+        }
+        .block { margin-bottom: 28px; }
+        .block h2 {
+            font-size: 19px;
+            color: #1e3a8a;
+            text-transform: uppercase;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 6px;
+            margin-bottom: 14px;
+        }
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 4px;
+        }
+        .entry-sub {
+            font-size: 14px;
+            color: #64748b;
+            margin-bottom: 8px;
+        }
+        .block p {
+            font-size: 14.5px;
+            line-height: 1.6;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="top-bar">
+    <a href="index.html">← Quay về Trang Chủ</a>
+</div>
+
+<div class="cv-container">
+    <!-- CỘT TRÁI -->
+    <aside class="sidebar">
+        <!-- Thay đường dẫn ảnh đại diện của bạn vào src -->
+        <img src="https://via.placeholder.com/150" alt="Ảnh chân dung" class="profile-pic">
+
+        <h3>Thông tin cá nhân</h3>
+        <p><strong>Ngày sinh:</strong> 15/08/2006</p>
+        <p><strong>Điện thoại:</strong> 0912 345 678</p>
+        <p><strong>Email:</strong> nguyenvana@gmail.com</p>
+        <p><strong>Địa chỉ:</strong> Quận 5, TP. Hồ Chí Minh</p>
+
+        <h3>Kỹ năng</h3>
+        <ul>
+            <li>Lập trình C++ & Thuật toán cơ bản</li>
+            <li>Thiết kế Web: HTML5, CSS3, JS</li>
+            <li>Quản lý mã nguồn với Git/GitHub</li>
+            <li>Kỹ năng làm việc nhóm & Thuyết trình</li>
+        </ul>
+
+        <h3>Sở thích</h3>
+        <ul>
+            <li>Lập trình & Giải thuật</li>
+            <li>Thiết kế giao diện Web</li>
+            <li>Đọc sách & Chơi thể thao</li>
+        </ul>
+    </aside>
+
+    <!-- CỘT PHẢI -->
+    <main class="main-content">
+        <div class="name-title">
+            <h1>Châu Nguyên Phúc</h1>
+            <div class="role">SINH VIÊN CÔNG NGHỆ THÔNG TIN</div>
+        </div>
+
+        <div class="block">
+            <h2>Mục tiêu nghề nghiệp</h2>
+            <p>Vận dụng kiến thức nền tảng về cấu trúc dữ liệu, giải thuật và thiết kế web để xây dựng các ứng dụng thực tế có tính thẩm mỹ và hiệu năng cao. Hướng tới vị trí Lập trình viên Full-stack trong tương lai.</p>
+        </div>
+
+        <div class="block">
+            <h2>Học vấn</h2>
+            <div class="entry-header">
+                <span>Trường Đại học Sư phạm TP.HCM (HCMUE)</span>
+                <span>2026</span>
+            </div>
+            <div class="entry-sub">Chuyên ngành: Công nghệ Thông tin</div>
+            <p>Các học phần tiêu biểu: Lập trình cơ bản (C++), Thiết kế Web (COMP1802), Toán rời rạc & Lý thuyết đồ thị.</p>
+        </div>
+
+        <div class="block">
+            <h2>Dự án & Bài tập thực hành</h2>
+            <div class="entry-header">
+                <span>Website Tổng Hợp Bài Tập Thiết Kế Web</span>
+                <span>11/2026</span>
+            </div>
+            <div class="entry-sub">Công nghệ sử dụng: HTML5, CSS3 (Flexbox, Grid, Animation)</div>
+            <p>Xây dựng hệ thống trang web liên kết gồm Trang chủ điều hướng, hoạt cảnh Hồ cá 2D, CV cá nhân và Trang trưng bày sản phẩm.</p>
+        </div>
+    </main>
+</div>
+
+</body>
+</html>
