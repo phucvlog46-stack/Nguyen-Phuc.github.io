@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Hồ Cá Vui Nhộn</title>
+    <title>Hồ Cá Vui Nhộn - Bài 6.1.1</title>
     <style>
         body {
             margin: 0;
@@ -39,37 +39,37 @@
             user-select: none;
         }
 
-        /* Cá mập */
+        /* Cá mập bơi ngang qua lại */
         #shark {
             width: 240px;
             top: 18%;
             animation: swimLeftRight 16s linear infinite;
         }
 
-        /* Rùa biển */
+        /* Rùa biển bơi chậm ở tầng dưới */
         #turtle {
             width: 140px;
             bottom: 12%;
             animation: swimRightLeft 26s linear infinite;
         }
 
-       /* Thợ lặn */
-#diver {
+        /* Thợ lặn lơ lửng lên xuống */
+        #diver {
             width: 150px;
-            position: absolute;
-
+            left: 20%;
             animation:
-                diverMove 12s ease-in-out infinite alternate,
-                diverTurn 12s steps(1, end) infinite alternate;
-        }
-        /* Đàn cá vàng */
-        #goldfish {
-        width: 180px;
-        top: 48%;
-        animation: swimLeftRight 20s linear infinite;
+                floatUpDown 7s ease-in-out infinite alternate,
+                swimLeftRight 20s linear infinite;
         }
 
-        /* Đàn cá nhỏ */
+        /* Đàn cá vàng bơi lượn */
+        #goldfish {
+            width: 180px;
+            top: 48%;
+            animation: swimLeftRight 20s ease-in-out infinite;
+        }
+
+        /* Đàn cá nhỏ bơi nền xa */
         #faintschool {
             width: 130px;
             top: 32%;
@@ -95,17 +95,10 @@
             100% { right: -200px; transform: scaleX(-1); }
         }
 
-        /* Thợ lặn di chuyển qua lại và lên xuống */
-        @keyframes diverMove {
-            0% {left: 5%;top: 15%;}
-            25% {left: 25%;top: 35%;}
-            50% {left: 50%;top: 20%;}
-            75% {left: 70%;top: 45%;}
-            100% {left: 85%;top: 25%;}
-        }
-        @keyframes diverTurn {
-            0% {transform: scaleX(1);}
-            100% {transform: scaleX(-1);}
+        /* Hiệu ứng thợ lặn lên xuống */
+        @keyframes floatUpDown {
+            0%   { top: 15%; transform: rotate(4deg); }
+            100% { top: 62%; transform: rotate(-6deg); }
         }
     </style>
 </head>
@@ -113,7 +106,7 @@
 
     <a href="index.html" class="back-btn">← Về Trang Chủ</a>
 
-    <!-- Các thẻ img, hình ảnh giải nén từ aquarium.zip -->
+    <!-- Các thẻ img trỏ tới hình ảnh giải nén từ aquarium.zip -->
     <img id="shark" class="creature" src="shark.png" alt="Cá mập">
     <img id="turtle" class="creature" src="turtle.png" alt="Rùa biển">
     <img id="diver" class="creature" src="diver1.png" alt="Thợ lặn">
