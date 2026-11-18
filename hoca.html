@@ -96,26 +96,29 @@
 
         /* Thợ lặn di chuyển qua lại và lên xuống */
 @keyframes diverSwim {
+    /* Bơi sang phải */
     0% {
         left: 5%;
         top: 15%;
-        transform: rotate(-5deg);}
+        transform: scaleX(1) rotate(-5deg);}
     25% {
         left: 25%;
         top: 35%;
-        transform: rotate(5deg);}
+        transform: scaleX(1) rotate(5deg);}
     50% {
         left: 50%;
         top: 20%;
-        transform: rotate(-5deg);}
+        transform: scaleX(1) rotate(-5deg);}
     75% {
         left: 70%;
         top: 50%;
-        transform: rotate(5deg);}
+        transform: scaleX(1) rotate(5deg);}
+    /* Quay đầu và bơi ngược sang trái */
     100% {
         left: 85%;
         top: 25%;
-        transform: rotate(-5deg);}
+        transform: scaleX(-1) rotate(-5deg);
+    }
 }
         
     </style>
@@ -124,7 +127,7 @@
 
     <a href="index.html" class="back-btn">← Về Trang Chủ</a>
 
-    <!-- Các thẻ img trỏ tới hình ảnh giải nén từ aquarium.zip -->
+    <!-- Các thẻ img, hình ảnh giải nén từ aquarium.zip -->
     <img id="shark" class="creature" src="shark.png" alt="Cá mập">
     <img id="turtle" class="creature" src="turtle.png" alt="Rùa biển">
     <img id="diver" class="creature" src="diver1.png" alt="Thợ lặn">
